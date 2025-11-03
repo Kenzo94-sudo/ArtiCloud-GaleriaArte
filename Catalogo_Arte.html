@@ -1,40 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CATALOGO DE ARTE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>ArtiCloud</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de Arte | ArtiCloud</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+  rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="catalogo.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="logo1.png" alt="Logo" class="logo">
+      <h1>ARTICLOUD</h1>
+    </div>
+
+    <nav class="nav-center">
+      <a href="Catalogo_Arte.html">Pinturas</a>
+      <a href="Fotografia.html">Fotografía</a>
+      <a href="Escultura.html">Escultura</a>
+      <a href="Dibujos.html">Dibujos</a>
+      <a href="Grabados.html">Grabados</a>
+      <a href="Artistas.html">Artistas</a>
+      <a href="Tienda.html">Tienda</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Buscar arte...">
+      </div>
+
+      <img src="logo2.png" alt="Idioma" class="flag">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-shopping-bag"></i>
+    </div>
+  </header>
+  <!-- 🖼️ Catálogo estilo Masonry -->
+  <main class="gallery">
+
+    <div class="item">
+      <img src="pintura1.jpg" alt="Obra 1">
+      <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$6000</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="pintura2.jpg" alt="Obra 2">
+    <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$2000</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="pintura3.jpg" alt="Obra 3">
+    <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$10000</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="pintura4.jpg" alt="Obra 4">
+      <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$50000</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="pintura5.jpg" alt="Obra 5">
+      <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$4000</button>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="pintura6.jpg" alt="Obra 6">
+      <div class="card-body">
+        <h5 class="card-title">Título de la Obra</h5>
+        <p class="card-text">Descripción de la obra o detalle del artista.</p>
+        <button type="button" class="btn btn-success">$5000</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ArtiCloud. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
-<div class="card-group">
-  <div class="card">
-    <img src="pintura1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="pintura2.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="pintura3.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
