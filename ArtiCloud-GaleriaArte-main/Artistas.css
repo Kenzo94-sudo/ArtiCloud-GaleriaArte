@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display:flex;
+  justify-content: center;
+}
+
+/* Barra principal */
+/* Estilo para el logo pequeño */
+.navbar-brand img {
+    height: 40px; /* <--- ESTE ES EL VALOR QUE DEBES CAMBIAR */
+    width: auto; 
+    margin-right: 2px; 
+    vertical-align: middle; 
+}
+.navbar-logo img {
+    height: 40px; /* <--- ESTE ES EL VALOR QUE DEBES CAMBIAR */
+    width: auto; 
+    margin-right: 2px; 
+    vertical-align: middle; 
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-center {
+    display: none; /* Ocultar menú en móviles */
+  }
+
+  .search-box input {
+    width: 100px;
+  }
+}
+
+/* === GALERÍA DE ARTISTAS === */
+/* --- Estilos de la Galería de Artistas (MAIN y CÍRCULOS) --- */
+
+/* --- Estilos de la Galería de Artistas (MAIN) --- */
+.gallery {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Contenedor de la Cuadrícula */
+.artistas-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px 10px; 
+    justify-content: center;
+}
+
+/* La Tarjeta Completa del Artista (el enlace <a>) */
+.artista-contenido_foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+}
+
+/* Contenedor Circular para las Imágenes (EL ENVOLTORIO) */
+.artista-circle-wrapper {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; /* CLAVE: Crea la forma circular */
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid #eee; 
+    position: relative; /* CLAVE para la superposición de imágenes */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de ligera elevación al pasar el ratón */
+.artista-contenido_foto:hover .artista-circle-wrapper {
+    transform: scale(1.05); 
+}
+
+
+/* Estilo base para AMBAS imágenes dentro del círculo */
+.artista-foto_item,
+.art-foto_item {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+    position: absolute; /* CLAVE: Posiciona las imágenes una encima de la otra */
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* 1. La Foto de Perfil del Artista (Visible por defecto, en B/N) */
+.artista-foto_item {
+    z-index: 2; /* Siempre encima por defecto */
+    opacity: 1;
+    filter: grayscale(100%); }
+
+/* 2. La Obra de Arte (Oculta por defecto, a color) */
+.art-foto_item {
+    z-index: 1; /* Detrás del artista */
+    opacity: 0; 
+    filter: none; 
+}
+
+
+/* --- EFECTO HOVER: REVELAR LA OBRA --- */
+
+.artista-contenido_foto:hover .artista-foto_item {
+    opacity: 0; /* Oculta la foto del artista */
+}
+
+.artista-contenido_foto:hover .art-foto_item {
+    opacity: 1; /* Muestra la obra de arte (a color) */
+}
+
+
+/* Nombre del Artista */
+.artista-contenido_foto div {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+    line-height: 1.2; 
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+  .gallery {
+    padding: 30px;
+  }
+  .nav-center {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    padding: 20px;
+  }
+  .artistas-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

@@ -1,0 +1,45 @@
+/* Estilo para el logo pequeño */
+.navbar-brand img {
+    height: 40px; /* <--- ESTE ES EL VALOR QUE DEBES CAMBIAR */
+    width: auto; 
+    margin-right: 2px; 
+    vertical-align: middle; 
+}
+.navbar-logo img {
+    height: 40px; /* <--- ESTE ES EL VALOR QUE DEBES CAMBIAR */
+    width: auto; 
+    margin-right: 2px; 
+    vertical-align: middle; 
+}
+
+.contenedor-texto-arte {
+    text-align: center; /* Centra todo el contenido de texto dentro de este contenedor */
+    padding-top: 50px; /* Espacio superior, ajusta a tu gusto */
+    padding-bottom: 50px; /* Espacio inferior, ajusta a tu gusto */
+}
+
+/* Estilo para la línea "Galería de arte online" */
+.titulo-principal {
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo para la línea "Te presentamos tu galería de arte online" */
+.subtitulo-grande {
+    font-size: 1.8rem; /* Tamaño de fuente mediano-grande */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 1.5rem; /* Más espacio abajo para separarse del texto más pequeño */
+}
+
+/* Estilo para el texto pequeño superior "Arte inspirador..." */
+.texto-pequeno-superior {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+/* Estilo para el texto pequeño inferior "Arte para los que están..." */
+.texto-pequeno-inferior {
+    font-size: 1rem;
+    margin-top: 0;
+}
