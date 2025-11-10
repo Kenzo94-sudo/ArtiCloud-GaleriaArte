@@ -1,0 +1,124 @@
+/* Paleta de colores inspirada en Articloud */
+:root {
+    --primary-color: #17427D; 
+    --background-color: #f8f8f8; 
+    --border-color: #ddd; 
+    --input-focus-color: #a8c1e0; 
+    --title-bg: #f0f0f0; 
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- CAMBIO CLAVE AQUÍ: Aumentamos el ancho máximo (max-width) --- */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px; /* Aumentamos el padding horizontal */
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    max-width: 550px; /* **Ajustado a 550px** para hacerlo más rectangular */
+    width: 90%;
+}
+
+/* --- Título Principal --- */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* --- Título de Sección --- */
+.section-title {
+    font-weight: bold;
+    color: #333;
+    background-color: var(--title-bg);
+    padding: 10px 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+/* --- Grupos de Campos --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* --- Campos de Entrada --- */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px; 
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    height: 40px; 
+    background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--input-focus-color); 
+}
+
+/* --- Botón de Enviar --- */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color); 
+    color: white;
+    border: none;
+    border-radius: 6px; 
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #2a5d9a;
+}
+
+/* --- Estilos para Radio Buttons (Selector de Rol) --- */
+.form-group-radio {
+    margin: 20px 0;
+    padding-top: 10px;
+    border-top: 1px solid #eee; 
+}
+
+.form-group-radio > label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-group-radio input[type="radio"] {
+    margin-right: 5px;
+}

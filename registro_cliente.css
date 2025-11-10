@@ -1,0 +1,109 @@
+/* Paleta de colores inspirada en Articloud: 
+   Azul oscuro para botones (similar al de "Iniciar Sesión") y 
+   naranja/coral suave para destacar. */
+:root {
+    --primary-color: #17427D; /* Azul Oscuro para botones/focos */
+    --secondary-color: #EE7744; /* Naranja/Coral para acentos (similar al logo) */
+    --background-color: #f8f8f8;
+    --border-color: #ddd;
+    --input-focus-color: #a8c1e0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Mantenemos una fuente limpia */
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del Formulario: Más pequeño y centrado */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    max-width: 380px; /* Hacemos el contenedor más estrecho (pequeño) */
+    width: 90%;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.4em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-bottom: none; /* Quitamos la línea del título anterior */
+}
+
+/* Título de Sección ("DATOS DE CONTACTO") */
+.section-title {
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+/* Estilo para Grupos de Formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Campos de Entrada: Bordes suaves y sombra al enfocar */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="email"] { /* Añadido el tipo email */
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px; /* Bordes redondeados */
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--input-focus-color); /* Efecto de foco sutil */
+}
+
+/* Botón "CREAR CUENTA" */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color); /* Azul oscuro, como "Iniciar Sesión" */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Bordes redondeados */
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #2a5d9a; /* Un poco más claro al pasar el ratón */
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
