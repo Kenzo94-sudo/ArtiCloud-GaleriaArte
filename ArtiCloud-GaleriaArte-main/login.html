@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtiCloud - Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        
+        <div class="logo-area">
+            <img src="Img/Login/logo_final.png" alt="Logo ArtiCloud Galería Virtual" class="centered-logo">
+ 
+        </div>
+
+        <form class="login-form">
+            <input type="text" class="input-field" placeholder="Nombre de usuario" required>
+            <input type="password" class="input-field" placeholder="Contraseña" required>
+        
+        <div class="role-selection">
+        <p class="role-label">Selecciona tu Rol:</p>
+        
+        <label for="rol-artista">
+            <input type="radio" id="rol-artista" name="user-role" value="artista" required> 
+            Artista
+        </label>
+        
+        <label for="rol-usuario">
+            <input type="radio" id="rol-usuario" name="user-role" value="cliente" required>
+            Usuario
+        </label>
+    </div>
+        <button type="submit" class="login-button">Iniciar Sesión</button>
+        </form>
+
+        <div class="link-area">
+            <a href="#">Olvidé mi contrasesa</a>
+            <a href="#">Crear una cuenta</a>
+        </div>
+    </div>
+
+</body>
+</html>

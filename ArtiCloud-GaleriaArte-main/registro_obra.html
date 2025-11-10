@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Nuevo Cuadro - Articloud (Bootstrap-like)</title>
+    <link rel="stylesheet" href="registro_obra.css"> 
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>REGISTRO DE NUEVA OBRA</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            
+            <div class="section-title">DETALLES DE LA OBRA</div>
+            
+            <div class="form-group">
+                <label for="titulo">Título del Cuadro :</label>
+                <input type="text" id="titulo" name="titulo" maxlength="100" required placeholder="Ej: La Noche Estrellada">
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción de la Obra:</label>
+                <textarea id="descripcion" name="descripcion" rows="3" placeholder="Describe detales, la inspiración..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Tipode de Arte">tipo de Arte: </label>
+                <select id="tipo de arte" name="tipo de arte" required>
+                    <option value="" disabled selected>Selecciona el tipo de Arte</option>
+                    <option value="Pinturas">Pinturas</option>
+                    <option value="Fotografia">Fotografia</option>
+                    <option value="Escultura">Escultura</option>
+                    <option value="Dibujos">Dibujos</option>
+                    <option value="Grabados">Grabados</option>
+                    <option value="Inspiracion">Inspiracion</option>
+                </select>
+
+            <div class="section-title">PRECIO </div>
+            
+            <div class="form-group">
+                <label for="precio">Precio del cuadro:</label>
+                <input type="text" id="precio" name="precio"  placeholder="Ej: 500.00">
+            </div>
+
+            <div class="form-group">
+                <label for="precio">Precio de envio nacional:</label>
+                <input type="text" id="precio" name="precio" placeholder="Ej: 10.00">
+            </div>
+             <div class="form-group">
+                <label for="precio">Precio de envio internacional:</label>
+                <input type="text" id="precio" name="precio" placeholder="Ej: 10.00">
+            </div>
+
+            <div class="section-title">CARGA DE IMAGEN</div>
+            <div class="form-group">
+                <label for="imagen">Subir Imagen del Cuadro:</label>
+                <input type="file" id="imagen" name="imagen" accept="image/*" required class="form-control-file">
+            </div>
+            
+            <button type="submit" class="submit-btn btn-primary">Registrar OBRA</button>
+        </form>
+    </div>
+
+</body>
+</html>

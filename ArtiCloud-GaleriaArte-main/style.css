@@ -1,0 +1,129 @@
+/* Paleta de colores clave */
+:root { /* Declara variables globales para reutilizar colores fácilmente. */
+    --color-arti: #1e4a7a;     /* Azul Oscuro: Usado para 'Arti' y el botón. */
+    --color-cloud: #e88d31;    /* Naranja: Usado para 'Cloud'. */
+    --color-link: #4a90e2;     /* Azul Claro: Usado para enlaces y bordes de input al hacer foco. */
+    --color-subtitle: #777777; /* Gris: Usado para subtítulos o texto secundario. */
+}
+
+/* ---------------------------------------------------------------------- */
+/* ESTILOS BASE Y FONDO */
+/* ---------------------------------------------------------------------- */
+body, html { /* Aplica estas reglas a toda la ventana del navegador. */
+    margin: 0; /* Elimina los márgenes exteriores predeterminados. */
+    padding: 0; /* Elimina el relleno interior predeterminado. */
+    height: 100%; /* Asegura que la página ocupe el 100% de la altura de la ventana. */
+    font-family: Arial, sans-serif; /* Define la fuente base. */
+    
+    /* Configuración Flexbox para centrar el login en el centro de la pantalla */
+    display: flex; /* Activa Flexbox. */
+    justify-content: center; /* Centra el contenido horizontalmente. */
+    align-items: center; /* Centra el contenido verticalmente. */
+    
+    /* --- AQUÍ ES DONDE APLICAMOS LA IMAGEN DE FONDO --- */
+    background-image: url('Img/Login/fondo_login.jpg'); /* Carga la imagen de fondo. */
+    background-size: cover; /* Escala la imagen para que cubra toda la pantalla sin dejar huecos. */
+    background-position: center center; /* Centra la imagen de fondo. */
+    background-repeat: no-repeat; /* Evita que la imagen se repita. */
+    background-color: #f8f8f8; /* Color de fondo de respaldo si la imagen no carga. */
+    /* ------------------------------------------------ */
+
+    position: relative; /* Define la posición relativa. */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde, evitando barras de desplazamiento. */
+}
+
+
+/* Contenedor Principal */
+.login-container { /* Estilos para la caja que contiene el logo, formulario y enlaces. */
+    position: relative; /* Define posición relativa (necesario para z-index). */
+    
+    /* Nota: Falta 'z-index: 10;' aquí, que es recomendable para poner la caja sobre el fondo. */
+    
+    display: flex; /* Activa Flexbox para los elementos internos. */
+    flex-direction: column; /* Apila los elementos internos (logo, form, enlaces) en columna. */
+    align-items: center; /* Centra los elementos internos horizontalmente. */
+    width: 340px; /* Establece el ancho fijo del contenedor. */
+    padding: 3000px; /* ¡ATENCIÓN! Este valor es un error de tipeo (3000px) y hará la caja gigante. Debería ser algo como '30px 20px'. */
+}
+    
+/* ---------------------------------------------------------------------- */
+/* ESTILOS DEL LOGO Y TEXTO */
+/* ---------------------------------------------------------------------- */
+
+.centered-logo { /* Estilos para la etiqueta <img> del logo. */
+    width: 400px; /* Ancho de la imagen (ajusta este valor si es muy grande). */
+    height: auto; /* Mantiene la proporción de la imagen. */
+    display: block; /* La imagen ocupa su propia línea. */
+    margin: 0 auto; /* Centra la imagen horizontalmente. */
+    margin-bottom: 10px; /* Espacio debajo de la imagen. */
+}
+
+.logo-name { /* Estilos para el texto "ArtiCloud". */
+    font-size: 36px; /* Tamaño de letra grande. */
+    font-weight: bold; /* Pone el texto en negrita. */
+    margin-bottom: 5px; /* Margen debajo del texto. */
+    margin-top: 0; /* Sin margen encima. */
+}
+
+/* Nota: Faltan las reglas .logo-name .arti y .logo-name .cloud en este bloque, que le dan el color. */
+
+
+/* ---------------------------------------------------------------------- */
+/* ESTILOS DEL FORMULARIO */
+/* ---------------------------------------------------------------------- */
+
+.login-form { /* Estilos para el contenedor <form>. */
+    width: 100%; /* El formulario ocupa todo el ancho del contenedor padre (340px). */
+    display: flex; /* Activa Flexbox. */
+    flex-direction: column; /* Apila los inputs y el botón verticalmente. */
+    gap: 15px; /* Separación de 15px entre cada campo y el botón. */
+}
+
+.input-field { /* Estilos para los campos de texto y contraseña. */
+    padding: 15px; /* Relleno interno (hace los campos altos). */
+    border: 1px solid #ccc; /* Borde gris delgado. */
+    border-radius: 5px; /* Esquinas redondeadas. */
+    font-size: 16px; /* Tamaño de la fuente al escribir. */
+    box-sizing: border-box; /* Asegura que el padding/border no se sumen al 100% del width. */
+    outline: none; /* Quita el contorno por defecto al hacer click. */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); /* Sombra interna sutil (efecto hundido). */
+}
+
+.input-field:focus { /* Estilos que se aplican cuando el campo está seleccionado. */
+    border-color: var(--color-link); /* Cambia el borde a azul. */
+}
+
+.login-button { /* Estilos para el botón "Iniciar Sesión". */
+    padding: 15px; /* Relleno que controla la altura del botón. */
+    background-color: var(--color-arti); /* Fondo azul oscuro. */
+    color: white; /* Texto blanco. */
+    border: none; /* Quita el borde. */
+    border-radius: 30px; /* Esquinas muy redondeadas (forma de píldora). */
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; /* Muestra el puntero de mano. */
+    transition: background-color 0.3s; /* Suaviza el cambio de color al hacer hover. */
+    margin-top: 10px; /* Espacio encima del botón. */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de elevación. */
+}
+
+.login-button:hover { /* Estilos que se aplican cuando el ratón está sobre el botón. */
+    background-color: #2762a1; /* Oscurece ligeramente el fondo. */
+}
+
+.link-area { /* Estilos para el contenedor de los enlaces inferiores. */
+    display: flex; /* Activa Flexbox. */
+    justify-content: center; /* Centra los enlaces dentro de esta área. */
+    gap: 20px; /* Espacio de 20px entre los dos enlaces. */
+    margin-top: 20px; /* Margen encima del área de enlaces. */
+}
+
+.link-area a { /* Estilos aplicados a cada enlace <a>. */
+    color: var(--color-link); /* Color azul claro. */
+    text-decoration: none; /* Quita el subrayado por defecto. */
+    font-size: 14px; 
+}
+
+.link-area a:hover { /* Estilos al pasar el ratón sobre un enlace. */
+    text-decoration: underline; /* Muestra el subrayado. */
+}

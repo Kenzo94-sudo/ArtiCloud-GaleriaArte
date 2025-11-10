@@ -1,0 +1,121 @@
+/* Paleta de colores Articloud y variables de diseño */
+:root {
+    --primary-color: #17427D; /* Azul Oscuro para botones (Bootstrap Primary) */
+    --background-color: #f8f8f8; 
+    --border-color: #ced4da; 
+    --input-focus-color: #80bdff; 
+    --title-bg: #e9ecef; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- Contenedor Principal (MÁS PEQUEÑO Y RECTANGULAR) --- */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px; /* Padding reducido */
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+    max-width: 450px; /* **REDUCIDO a 450px** para hacerlo más compacto */
+    width: 90%;
+}
+
+/* --- Títulos --- */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.4em; /* Fuente un poco más pequeña */
+    margin-bottom: 25px;
+    font-weight: 500; 
+}
+
+.section-title {
+    font-weight: 600; 
+    color: #495057; 
+    background-color: var(--title-bg);
+    padding: 10px 15px;
+    margin-top: 1.5rem; /* Margen superior moderado */
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em; /* Fuente más pequeña */
+    text-transform: uppercase;
+}
+
+/* --- Grupos y Labels --- */
+.form-group {
+    margin-bottom: 0.8rem; /* Espaciado reducido */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem; /* Margen de label más pequeño */
+    font-size: 0.9em;
+    color: #495057;
+    font-weight: 400;
+}
+
+/* --- Campos de Entrada (Bootstrap-like form-control) --- */
+.form-group input:not([type="file"]),
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 0.6rem; /* Padding reducido */
+    font-size: 0.9em; /* Texto en el campo más pequeño */
+    line-height: 1.4;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 0.2rem; /* Bordes un poco menos redondeados */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff; 
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem rgba(23, 66, 125, 0.25); /* Sombra de foco más sutil */
+}
+
+/* Estilo específico para el textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px; /* Altura mínima reducida */
+}
+
+/* Estilo para el input de archivo */
+.form-control-file {
+    padding: 0.3rem 0;
+}
+
+/* --- Botón de Enviar (Bootstrap Primary Button) --- */
+.submit-btn {
+    width: 100%;
+    padding: 0.4rem 0.8rem; /* Padding reducido */
+    font-size: 1em; /* Texto del botón más pequeño */
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    
+    background-color: var(--primary-color); 
+    color: white;
+    border: 1px solid var(--primary-color);
+}
+
+.submit-btn:hover {
+    background-color: #113360;
+    border-color: #113360;
+}
